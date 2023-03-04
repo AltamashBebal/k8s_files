@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: linodmongo
+spec:
+  selector:
+    app.kubernetes.io/name:   
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017

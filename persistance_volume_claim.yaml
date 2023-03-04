@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: ebs-pvc
+  labels: 
+    type: amazonEBS
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ""
+  # volumeName: ebs-pv
+  resources:
+    requests:
+      storage: 2Gi
